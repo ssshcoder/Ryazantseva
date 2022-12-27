@@ -8,9 +8,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"> --> 
+    <!--                              SWIPER                    -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
+    <script defer src="main.js"></script>
     <title>Дарья Рязанцева</title>
 </head>
 <body>
@@ -18,11 +20,14 @@
     <header class="header">
 
         <div class="header__container container">
+            <div class="header__burger burger">
+                <span class="burger__span"></span>
+              </div>
             <nav class="header__nav nav">
                 <a href="#about" class="nav__link">Обо&nbspмне</a>
                 <a href="#why-me" class="nav__link">Программа</a>
                 <a href="#reviews" class="nav__link">Отзывы</a>
-                <a href="#form" class="nav__link"><span>Пробный&nbspурок</span> </a>
+                <a href="#form" class="nav__link scroll-btn"><span>Пробный&nbspурок</span> </a>
             </nav>
             <div class="header__right-container">
                 <div class="header__socials">
@@ -59,13 +64,19 @@
                 <p class="hero__descr">
                     Моя цель: качественное и эффективное  преподавание языка 
                 </p>
-                <button class="hero__button btn">
+                <button class="hero__button btn scroll-btn">
                     Хочу пробный урок!
                 </button>
             </div>
 
-            <img src="./img/hero.png" alt="Дарья Рязанцева" class="hero__img">
-            <img src="./img/Ellipse 1.png" alt="Дарья Рязанцева" class="hero__ellipse">
+            <picture>
+                <source media="(max-width: 1024px)" srcset="./img/hero__1024.png" >
+                <img src="./img/hero.png" alt="Дарья Рязанцева" class="hero__img">
+            </picture>
+            <picture>
+                <source media="(max-width: 1024px)" srcset="./img/hero__ellipse__1024.png" >
+                <img src="./img/hero__ellipse.png" alt="Дарья Рязанцева" class="hero__ellipse">
+            </picture>
 
         </div>
     </section>
@@ -74,7 +85,10 @@
         <div class="container about__container">
 
             <div class="about__img-wrap">
-                <img src="./img/aboutMe.png" alt="" class="about__img">
+                <picture>
+                    <source media="(max-width: 1024px)" srcset="./img/about__1024.png" >
+                    <img src="./img/aboutMe.png" alt="Дарья Рязанцева" class="about__img">
+                </picture>
                 <div class="about__img-descr">
                     Дарья Рязанцева
                 </div>
@@ -158,51 +172,101 @@
         <div class="reviews__top-wave top-wave">
             <img src="./img/wave-2.png" alt="">
         </div>
-
+        
         <div class="reviews__container container">
         
             <h2 class="reviews__title h2">
                 Отзывы родителей
             </h2>
-            
-            <div class="reviews__wrapper">
-            
-                <div class="reviews__item review">
-                    <div class="review__text-container">
-                        Мой сын (9 лет) ходит на индивидуальные занятия с сентября (4 мес.). И уже виден прогресс в изучении предмета. Мне нравится, что Дарья Владимировна подходит индивидуально к каждому своему ученику. Делает с ним домашние задания. В игровой форме обьясняет правописание. Очень добрый и распологающий к себе человек. Сыну очень нравится ходить на занятия. И возвращается всегда счастливый, особенно если его похвалили за успехи. Спасибо вам Дарья Владимировна за вашу работу!
-                        <span class="review__name">Юлия</span>
-                        <div class="review__stars">
-                            <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
-                        </div>
-                    </div>
-                    
-                    <img src="./img/review__iyulia.jpg" alt="Фото Юлии" class="review__parent-img">
+
+             <!-- Slider main container -->
+            <div class="swiper-outer">
+                <div class="swiper reviews__wrapper">
+                   
+                   <!-- Additional required wrapper -->
+                   <div class="swiper-wrapper">
+                       <!-- Slides -->
+                       <div class="swiper-slide">
+                           <div class="reviews__item review">
+                               <div class="review__text-container">
+                                   Мой сын (9 лет) ходит на индивидуальные занятия с сентября (4 мес.). И уже виден прогресс в изучении предмета. Мне нравится, что Дарья Владимировна подходит индивидуально к каждому своему ученику. Делает с ним домашние задания. В игровой форме обьясняет правописание. Очень добрый и распологающий к себе человек. Сыну очень нравится ходить на занятия. И возвращается всегда счастливый, особенно если его похвалили за успехи. Спасибо вам Дарья Владимировна за вашу работу!
+                                   <span class="review__name">Юлия</span>
+                                   <div class="review__stars">
+                                       <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
+                                   </div>
+                               </div>
+                               
+                               <img src="./img/review__iyulia.jpg" alt="Фото Юлии" class="review__parent-img">
+                           </div>
+                       </div>
+                
+                       <div class="swiper-slide">
+                           <div class="reviews__item review">
+                               <div class="review__text-container">
+                                   Мой сын (9 лет) ходит на индивидуальные занятия с сентября (4 мес.). И уже виден прогресс в изучении предмета. Мне нравится, что Дарья Владимировна подходит индивидуально к каждому своему ученику. Делает с ним домашние задания. В игровой форме обьясняет правописание. Очень добрый и распологающий к себе человек. Сыну очень нравится ходить на занятия. И возвращается всегда счастливый, особенно если его похвалили за успехи. Спасибо вам Дарья Владимировна за вашу работу!
+                                   <span class="review__name">Юлия</span>
+                                   <div class="review__stars">
+                                       <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
+                                   </div>
+                               </div>
+                               
+                               <img src="./img/review__iyulia.jpg" alt="Фото Юлии" class="review__parent-img">
+                           </div>
+                       </div>
+                
+                       <div class="swiper-slide">
+                           <div class="reviews__item review">
+                               <div class="review__text-container">
+                                   Мой сын (9 лет) ходит на индивидуальные занятия с сентября (4 мес.). И уже виден прогресс в изучении предмета. Мне нравится, что Дарья Владимировна подходит индивидуально к каждому своему ученику. Делает с ним домашние задания. В игровой форме обьясняет правописание. Очень добрый и распологающий к себе человек. Сыну очень нравится ходить на занятия. И возвращается всегда счастливый, особенно если его похвалили за успехи. Спасибо вам Дарья Владимировна за вашу работу!
+                                   <span class="review__name">Юлия</span>
+                                   <div class="review__stars">
+                                       <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
+                                   </div>
+                               </div>
+                               
+                               <img src="./img/review__iyulia.jpg" alt="Фото Юлии" class="review__parent-img">
+                           </div>
+                       </div>
+                
+                       <div class="swiper-slide">
+                           <div class="reviews__item review">
+                               <div class="review__text-container">
+                                   Мой сын (9 лет) ходит на индивидуальные занятия с сентября (4 мес.). И уже виден прогресс в изучении предмета. Мне нравится, что Дарья Владимировна подходит индивидуально к каждому своему ученику. Делает с ним домашние задания. В игровой форме обьясняет правописание. Очень добрый и распологающий к себе человек. Сыну очень нравится ходить на занятия. И возвращается всегда счастливый, особенно если его похвалили за успехи. Спасибо вам Дарья Владимировна за вашу работу!
+                                   <span class="review__name">Юлия</span>
+                                   <div class="review__stars">
+                                       <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
+                                   </div>
+                               </div>
+                               
+                               <img src="./img/review__iyulia.jpg" alt="Фото Юлии" class="review__parent-img">
+                           </div>
+                       </div>
+                
+                       <div class="swiper-slide">
+                           <div class="reviews__item review">
+                               <div class="review__text-container">
+                                   Мой сын (9 лет) ходит на индивидуальные занятия с сентября (4 мес.). И уже виден прогресс в изучении предмета. Мне нравится, что Дарья Владимировна подходит индивидуально к каждому своему ученику. Делает с ним домашние задания. В игровой форме обьясняет правописание. Очень добрый и распологающий к себе человек. Сыну очень нравится ходить на занятия. И возвращается всегда счастливый, особенно если его похвалили за успехи. Спасибо вам Дарья Владимировна за вашу работу!
+                                   <span class="review__name">Юлия</span>
+                                   <div class="review__stars">
+                                       <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
+                                   </div>
+                               </div>
+                               
+                               <img src="./img/review__iyulia.jpg" alt="Фото Юлии" class="review__parent-img">
+                           </div>
+                       </div>
+                
+                   </div>
+                
                 </div>
 
-                <div class="reviews__item review">
-                    <div class="review__text-container">
-                        Отличный репетитор! Очень довольна качеством преподавания. Ребенок всегда с радостью идет на заятие.
-                        <span class="review__name">Юлия</span>
-                        <div class="review__stars">
-                            <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
-                        </div>
-                    </div>
-                    
-                    <img src="./img/review__iyulia.jpg" alt="Фото Юлии" class="review__parent-img">
-                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
 
-                <div class="reviews__item review">
-                    <div class="review__text-container">
-                        Отличный репетитор! Очень довольна качеством преподавания. Ребенок всегда с радостью идет на заятие.
-                        <span class="review__name">Юлия</span>
-                        <div class="review__stars">
-                            <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
-                        </div>
-                    </div>
-                    
-                    <img src="./img/review__iyulia.jpg" alt="Фото Юлии" class="review__parent-img">
-                </div>
-            
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
             </div>
         
         </div>
@@ -221,13 +285,13 @@
             </h2>
 
             <div class="formats__types-buttons">
-                <button class="formats__type-btn btn formats__online-btn active">Online</button>
-                <button class="formats__type-btn btn formats__ofline-btn">Очно</button>
+                <button class="formats__type-btn btn formats__online-btn active" data-type="Online">Online</button>
+                <button class="formats__type-btn btn formats__offline-btn" data-type="Offline">Очно</button>
             </div>
 
             <div class="formats__cards">
 
-                <div class="formats__format-card online-format-card format-card active">
+                <div class="formats__format-card online-format-card format-card active" data-format="Online">
                 
                     <div class="format-card__img-wrap">
                         <img src="./img/online__img.jpg" alt="" class="format-card__img">
@@ -247,7 +311,7 @@
                 
                 </div>
 
-                <div class="formats__format-card ofline-format-card format-card">
+                <div class="formats__format-card ofline-format-card format-card" data-format="Offline">
                 
                     <div class="format-card__img-wrap">
                         <img src="./img/online__img.jpg" alt="" class="format-card__img">
@@ -270,33 +334,39 @@
         </div>
     </section>
 
-    <section class="form-section section">
+    <section class="form-section section" id="form-section">
 
         <div class="form-section__top-wave top-wave">
             <img src="./img/wave-2.png" alt="">
         </div>
 
-        <form class="form-section__form form" id="form">
-
-            <h3 class="form__title">
-                Запишись на пробный урок (бесплатно)
-            </h3>
-
-            <div class="form__inputs">
-                <input type="text" class="form__input form__input_name" placeholder="Ваше имя*" required>
-                <input type="tel" class="form__input form__input_name" placeholder="Ваш телефон*" required>
-                <input type="text" class="form__input form__input_name" placeholder="Сообщение">
-            </div>
-
-            <button class="btn form__button" type="submit">Записаться!</button>
+        <div class="container">
+            <form class="form-section__form form" id="form">
             
-        </form>
+                <h3 class="form__title">
+                    Запишись на пробный урок (бесплатно)
+                </h3>
+            
+                <div class="form__inputs">
+                    <input type="text" class="form__input form__input_name" placeholder="Ваше имя*" required>
+                    <input type="tel" class="form__input form__input_tel" placeholder="Ваш телефон*" required>
+                    <textarea type="text" class="form__input form__input_massage" placeholder="Сообщение"></textarea>
+                </div>
+            
+                <button class="btn form__button" type="submit">Записаться!</button>
+                
+            </form>
+        </div>
 
         <img src="./img/form-arrow1.png" alt="" class="form-section__arrow">
         
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
+        
+        <div id="bubble-wrapper">
+        </div>
+
         <div class="container footer__container">
             <div class="footer__top-container">
                 <div class="footer__menu-wrap">
@@ -364,5 +434,6 @@
 
     </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </body>
 </html>
