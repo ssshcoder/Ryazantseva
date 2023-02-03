@@ -619,7 +619,7 @@ ul {
         &__old-price {
             display: inline-block;
             position: relative;
-            @include adaptiv-font(20, 10)
+            @include adaptiv-font(20, 14)
         }
         &__old-price::after {
             content: '';
@@ -637,7 +637,7 @@ ul {
 
         &__new-price {
             color: #03A513;
-            @include adaptiv-font(32, 14)
+            @include adaptiv-font(32, 16)
         }
 
 

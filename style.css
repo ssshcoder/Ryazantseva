@@ -770,12 +770,12 @@ ul {
 }
 @media (max-width: 767px) {
   .formats .format-card__old-price {
-    font-size: calc(10px + 17 * ((100vw - 320px) / 1120));
+    font-size: calc(14px + 10.2 * ((100vw - 320px) / 1120));
   }
 }
 @media (min-width: 767px) {
   .formats .format-card__old-price {
-    font-size: calc(10px + 10 * ((100vw - 320px) / 1120));
+    font-size: calc(14px + 6 * ((100vw - 320px) / 1120));
   }
 }
 @media (min-width: 1440px) {
@@ -800,12 +800,12 @@ ul {
 }
 @media (max-width: 767px) {
   .formats .format-card__new-price {
-    font-size: calc(14px + 30.6 * ((100vw - 320px) / 1120));
+    font-size: calc(16px + 27.2 * ((100vw - 320px) / 1120));
   }
 }
 @media (min-width: 767px) {
   .formats .format-card__new-price {
-    font-size: calc(14px + 18 * ((100vw - 320px) / 1120));
+    font-size: calc(16px + 16 * ((100vw - 320px) / 1120));
   }
 }
 @media (min-width: 1440px) {
