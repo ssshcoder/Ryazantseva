@@ -545,9 +545,17 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  justify-content: space-between;
+  min-height: 440px;
+}
+.reviews .review__stars {
+  display: none;
 }
 .reviews .review__text-container {
   display: flex;
+  justify-content: space-between;
+  height: 100%;
+  flex-grow: 1;
   flex-direction: column;
   background-color: #FFFFFF;
   border-radius: 50px;
@@ -703,11 +711,11 @@ ul {
 }
 .formats .format-card__img-wrap {
   width: 48%;
-  border-radius: 50px;
   overflow: hidden;
 }
 .formats .format-card__img {
   width: 100%;
+  border-radius: 50px;
 }
 .formats .format-card__text-container {
   width: 48%;
@@ -738,6 +746,16 @@ ul {
 }
 .formats .format-card__title span {
   color: #03A513;
+}
+.formats .format-card__list {
+  font-weight: 600;
+  list-style: circle;
+  padding-left: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.formats .format-card__list-item {
+  margin-bottom: 7px;
 }
 .formats .format-card__price {
   font-style: normal;
@@ -770,12 +788,12 @@ ul {
 }
 @media (max-width: 767px) {
   .formats .format-card__old-price {
-    font-size: calc(14px + 10.2 * ((100vw - 320px) / 1120));
+    font-size: calc(16px + 6.8 * ((100vw - 320px) / 1120));
   }
 }
 @media (min-width: 767px) {
   .formats .format-card__old-price {
-    font-size: calc(14px + 6 * ((100vw - 320px) / 1120));
+    font-size: calc(16px + 4 * ((100vw - 320px) / 1120));
   }
 }
 @media (min-width: 1440px) {
@@ -1231,14 +1249,6 @@ ul {
     z-index: 3;
   }
 }
-@-webkit-keyframes wave {
-  from, to {
-    transform: translate(-50%, 0%);
-  }
-  50% {
-    transform: translate(-50%, -20%);
-  }
-}
 @keyframes wave {
   from, to {
     transform: translate(-50%, 0%);
@@ -1264,14 +1274,12 @@ ul {
   position: absolute;
   left: 50%;
   top: 100%;
-  -webkit-animation: wave 2s ease-in-out infinite;
-          animation: wave 2s ease-in-out infinite;
+  animation: wave 2s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion) {
   .bubble {
-    -webkit-animation: none;
-            animation: none;
+    animation: none;
     display: none;
   }
 }/*# sourceMappingURL=style.css.map */

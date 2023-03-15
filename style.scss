@@ -435,13 +435,21 @@ ul {
     position: relative;
 
     .review {
-        // width: 400px;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+        justify-content: space-between;
+        min-height: 440px;
+
+        &__stars {
+            display: none;
+        }
 
         &__text-container {
             display: flex;
+            justify-content: space-between;
+            height: 100%;
+            flex-grow: 1;
             flex-direction: column;
             background-color: #FFFFFF;
             border-radius: 50px;
@@ -575,12 +583,12 @@ ul {
 
         &__img-wrap {
             width: 48%;
-            border-radius: 50px;
             overflow: hidden;
         }
 
         &__img {
             width: 100%;
+            border-radius: 50px;
         }
 
         &__text-container {
@@ -602,6 +610,19 @@ ul {
             color: #03A513;
         }
 
+        &__list {
+            font-weight: 600;
+            list-style: circle;
+            padding-left: 20px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+
+        }
+
+        &__list-item {
+            margin-bottom: 7px;
+        }
+
         // цена
         &__price {
             font-style: normal;
@@ -619,7 +640,7 @@ ul {
         &__old-price {
             display: inline-block;
             position: relative;
-            @include adaptiv-font(20, 14)
+            @include adaptiv-font(20, 16)
         }
         &__old-price::after {
             content: '';
